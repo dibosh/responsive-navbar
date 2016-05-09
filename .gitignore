@@ -1,0 +1,5 @@
+node_modules/
+.idea/
+public/styles/*.map
+.sass-cache
+.DS_Store

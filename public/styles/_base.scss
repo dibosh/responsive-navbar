@@ -1,0 +1,42 @@
+@import "fonts.css";
+
+$color-magenta: #ec008c;
+$color-light-grey: #eee;
+$color-translucent-black: rgba(black, 0.5);
+$color-white: #fff;
+
+.font-primary-nav {
+  font: 21px/48px HUGEAvantGardeBold;
+}
+
+.font-secondary-nav {
+  font: 16px/48px Galaxie;
+}
+
+.font-headline-desktop {
+  font: 120px/132px HUGEAvantGardeBold;
+}
+
+.font-headline-mobile {
+  font: 44px/48px HUGEAvantGardeBold;
+}
+
+.font-body-desktop {
+  font: 24px/36px Galaxie;
+}
+
+.font-body-mobile {
+  font: 14px/24px Galaxie;
+}
+
+.font-copyright {
+  font: 12px/16px Helvetica Neue;
+}
+
+body {
+  @extend .font-body-desktop;
+  color: $color-white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
