@@ -1,19 +1,94 @@
 .hugeinc-header {
   @extend .font-primary-nav;
-  padding: 24px;
   background: $color-magenta;
+  position: relative;
 
-  .hugeinc-navbar {
+  .nav-items, .sub-nav-items {
     list-style: none;
     margin: 0;
     padding: 0;
+  }
 
-    li {
+  .branding {
+    display: inline-block;
+    padding: 12px 48px;
+  }
+
+  .logo {
+    vertical-align: middle;
+    height: 25px;
+  }
+
+  .menu-icon, .close-icon {
+    vertical-align: middle;
+    width: 50px;
+  }
+
+  .mobile-menu {
+    display: none;
+    padding: 5px;
+  }
+
+  .close-button {
+    display: none;
+    padding: 12px 24px;
+  }
+
+  .nav-items {
+    display: inline-block;
+
+    .nav-item {
       display: inline-block;
-      padding: 0 24px;
-      a {
+      position: relative;
+
+      .nav-item-link {
         color: $color-white;
+        display: block;
+        padding: 12px 24px;
+        text-decoration: none;
+        &:hover {
+          @extend .nav-item-link-active;
+        }
+      }
+    }
+
+    .nav-item-link-active {
+      background: $color-white;
+      color: $color-magenta !important;
+    }
+  }
+
+
+
+  .sub-nav-items {
+    background: $color-white;
+    color: $color-black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    display: none;
+    @extend .font-secondary-nav;
+
+    &.show {
+      display: block;
+    }
+
+    .sub-nav-item-link {
+      text-decoration: none;
+      color: $color-black;
+      display: block;
+      padding: 5px 20px;
+
+      &:hover {
+        background: $color-translucent-black;
+        color: $color-magenta;
       }
     }
   }
+}
+
+.headline {
+  min-height: 80vh;
+  background: $color-black url('../images/background-image.jpg') no-repeat;
 }
