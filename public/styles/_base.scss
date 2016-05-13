@@ -7,32 +7,36 @@ $color-white: #fff;
 $color-black-grey: #676767;
 $color-black: #232323;
 
+html {
+  font-size: 67%;
+}
+
 .font-primary-nav {
-  font: 18px/42px HUGEAvantGardeBold;
+  font: 1.8rem/4.2rem HUGEAvantGardeBold;
 }
 
 .font-secondary-nav {
-  font: 16px/48px Galaxie;
+  font: 1.4rem/4.8rem Galaxie;
 }
 
 .font-headline-desktop {
-  font: 120px/132px HUGEAvantGardeBold;
+  font: 12rem/13.2rem HUGEAvantGardeBold;
 }
 
 .font-headline-mobile {
-  font: 44px/48px HUGEAvantGardeBold;
+  font: 4.4rem/4.8rem HUGEAvantGardeBold;
 }
 
 .font-body-desktop {
-  font: 24px/36px Galaxie;
+  font: 2.4rem/3.6rem Galaxie;
 }
 
 .font-body-mobile {
-  font: 14px/24px Galaxie;
+  font: 1.4rem/2.4rem Galaxie;
 }
 
 .font-copyright {
-  font: 12px/16px Helvetica Neue;
+  font: 1.2rem/1.6rem Helvetica Neue;
 }
 
 body {

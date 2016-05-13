@@ -30,8 +30,13 @@
   }
 
   .close-button {
+    padding: 3px;
+    float: right;
     display: none;
-    padding: 12px 24px;
+    opacity: 0;
+    transition: all 0.2s;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 
   .nav-items {
@@ -47,13 +52,13 @@
         padding: 12px 24px;
         text-decoration: none;
         &:hover {
-          @extend .nav-item-link-active;
+          background: $color-translucent-black;
         }
       }
     }
 
     .nav-item-link-active {
-      background: $color-white;
+      background: $color-white !important;
       color: $color-magenta !important;
     }
   }
