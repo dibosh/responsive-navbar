@@ -1,4 +1,5 @@
 @import "fonts.css";
+@import "mixins";
 
 $color-magenta: #ec008c;
 $color-light-grey: #eee;
@@ -8,39 +9,11 @@ $color-black-grey: #676767;
 $color-black: #232323;
 
 html {
-  font-size: 67%;
-}
-
-.font-primary-nav {
-  font: 1.8rem/4.2rem HUGEAvantGardeBold;
-}
-
-.font-secondary-nav {
-  font: 1.4rem/4.8rem Galaxie;
-}
-
-.font-headline-desktop {
-  font: 12rem/13.2rem HUGEAvantGardeBold;
-}
-
-.font-headline-mobile {
-  font: 4.4rem/4.8rem HUGEAvantGardeBold;
-}
-
-.font-body-desktop {
-  font: 2.4rem/3.6rem Galaxie;
-}
-
-.font-body-mobile {
-  font: 1.4rem/2.4rem Galaxie;
-}
-
-.font-copyright {
-  font: 1.2rem/1.6rem Helvetica Neue;
+  font-size: 62.5%;
 }
 
 body {
-  @extend .font-body-desktop;
+  @include font-body-desktop();
   color: $color-white;
   margin: 0;
   padding: 0;

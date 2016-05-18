@@ -1,3 +1,11 @@
+function getId(prefix, suffix) {
+  return (prefix + suffix).replace(/\s+/g, '-').toLowerCase();
+}
+
+function isMobile() {
+  return window.innerWidth <= 786;
+}
+
 // Helper method to hide or show an element
 function showElem(element, show) {
   var visibilityClass = show ? 'show' : 'hide';

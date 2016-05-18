@@ -24,12 +24,59 @@
   }
 }
 
+@media (max-width: 940px) {
+  .headline {
+    @include font-headline-tablet();
+
+    .featured-image {
+      position: static;
+      width: 100%;
+      height: 30%;
+    }
+
+    .title {
+      position: static;
+      padding: 10px 30px;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      color: $color-black;
+      max-width: 80%;
+      text-align: left;
+    }
+  }
+
+  .content {
+    padding: 20px 30px;
+    @include font-body-mobile();
+  }
+}
+
 @media (max-width: 786px) {
 
   .clearfix:after {
     content: "";
     display: table;
     clear: both;
+  }
+
+  .headline {
+    @include font-headline-mobile();
+    min-height: 20vh;
+
+    .featured-image {
+      position: static;
+      width: 100%;
+      height: 30%;
+    }
+
+    .title {
+      position: static;
+      padding: 10px 30px;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      color: $color-black;
+      max-width: 90%;
+    }
   }
 
   .hugeinc-header {
@@ -82,11 +129,14 @@
 
     .nav-items {
       position: absolute;
-      overflow: auto;
       top: 100%;
       left: 0;
       width: 80%;
       height: 100vh;
+      box-sizing: border-box;
+      padding-bottom: 100px;
+      overflow: auto;
+      z-index: 2;
       background: $color-white;
       opacity: 0;
       -webkit-transform: translate3d(-100%, 0, 0);
@@ -101,9 +151,22 @@
         transform: translate3d(0, 0, 0);
       }
 
+      .copyright-item {
+        padding: 12px 24px;
+        display: block;
+        color: $color-black;
+        margin-top: 80px;
+        @include font-copyright();
+      }
+
       .expand, .collapse {
         border-right: 10px solid transparent;
         background-size: 30px;
+      }
+
+      .nav-item-link-active {
+        background: $color-white !important;
+        color: $color-black !important;
       }
 
       .nav-item {
@@ -112,12 +175,13 @@
         .nav-item-link {
           color: $color-black;
 
+          &:hover {
+            color: $color-magenta;
+          }
+
           &.expand {
             background: rgba(0, 0, 0, 0) url('../images/expand-icon.svg') no-repeat right center;
             background-size: 30px;
-            &:hover {
-              background-color: $color-translucent-black;
-            }
           }
 
           &.collapse {
@@ -131,6 +195,7 @@
     .sub-nav-items {
       position: static;
       padding-left: 30px;
+      max-height: 40%;
     }
   }
 }

@@ -1,0 +1,35 @@
+@mixin font($size, $line-height, $family) {
+  font: ($size * 10) + px/($line-height * 10) + px $family;
+}
+
+@mixin font-primary-nav() {
+  @include font(1.8, 4.2, 'HUGEAvantGardeBold');
+}
+
+@mixin font-secondary-nav() {
+  @include font(1.4, 4.8, 'Galaxie');
+}
+
+@mixin font-headline-desktop() {
+  @include font(5, 12, 'HUGEAvantGardeBold');
+}
+
+@mixin font-headline-tablet() {
+  @include font(1.8, 5, 'HUGEAvantGardeBold');
+}
+
+@mixin font-headline-mobile() {
+  @include font(1.4, 4, 'HUGEAvantGardeBold');
+}
+
+@mixin font-body-desktop() {
+  @include font(2.4, 3.6, 'Galaxie');
+}
+
+@mixin font-body-mobile() {
+  @include font(1.4, 2.4, 'Galaxie');
+}
+
+@mixin font-copyright() {
+  @include font(1.2, 1.6, 'Helvetica Neue');
+}
